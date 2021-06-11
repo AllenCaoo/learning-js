@@ -1,10 +1,11 @@
 /* INTERACTIONS */
 /** alert
  * Shows a message and waits for the user to press “OK”.
- * Returns true if OK pressed, returns false if esc/cancel pressed.
+ * Returns undefined
  */
 
  result = alert("Hello there!");
+ alert(result)
 
  /** prompt
   * It shows a modal window with a text message, an input field for the visitor, and the buttons OK/cancel.
@@ -18,5 +19,9 @@
  */
 result = prompt("What is the 320th digit of pi");
 bruh = prompt("What is up", "not bad");
+
+/** confirm
+ * 
+ */
 
  
