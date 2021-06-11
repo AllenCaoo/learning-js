@@ -51,7 +51,7 @@ alert(9999999999999999999999999999999n) // does not error
 
 /** STRINGS
  * Text
- * can use single or double quots
+ * can use single or double quotes
  * Use backticks(` `) to embed another string in another string
  * ** There is not character data type
  */
@@ -93,9 +93,13 @@ alert(b); // undefined
  * Returns a STRING of what the type is of the operand/argument
 */
 
-typeof undefined // "undefined"
+alert(typeof undefined) // "undefined"
+
+alert(typeof(undefined)) // also works
 
 typeof 0 // "number"
+
+typeof(0) // also works\
 
 typeof 10n // "bigint"
 
