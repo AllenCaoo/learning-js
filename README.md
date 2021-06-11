@@ -1,7 +1,7 @@
 # learning-js
 Repository of notes and beginner files for learning JavaScript and Node.js 
 
-## Introduction
+## INTRODUCTION
 
 ### Some basics:
 > // this is a comment\
@@ -36,7 +36,7 @@ Erroring if you use "let" statement on an already declared variable
 > let var = 3;\
 > let var = 1; // error
 
-## Data Types
+## DATA TYPES
 ### Numbers
 Integers and floats; overflows once too big in the positives or negatives.
 - 302
@@ -142,3 +142,62 @@ Shows a modal window with a question and two buttons: OK and Cancel.
 
 > let isAllenCanadian = confirm("Is Allen Cao a Canadian");\
 > alert(isAllenCanadian); // true if OK is pressed
+
+## TYPE CONVERSIONS
+Most of the time, operators and functions automatically convert the values given to them to the right type.
+
+For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers.
+
+### String Conversion
+
+**alert(value)** automatically converts value to string
+
+**String(value)** converts value to string
+
+> let value = true;\
+> alert(typeof value); // boolean\
+> value = String(value); // now value is a string "true"\
+> alert(typeof value); // string
+
+### Numeric Conversion
+
+Numeric conversion happens in mathematical functions and expressions **AUTOMATICALLY**.
+
+Can also use **Number(value)** to explicity convert value to Number.
+
+NOTE:\
+**Number(true) = 1**\
+**Numer(false) = 0** 
+
+> alert( "6" / "2" ); // 3, strings are converted to numbers
+> let str = "123";\
+> alert(typeof str); // string\
+> let num = Number(str); // becomes a number 123\
+> alert(typeof num); // number\
+> space123 = Number("   123   ") // 123
+
+If conversion fails (i.e. Number("Hello World")), then **NaN** is returned.
+
+> let age = Number("an arbitrary string instead of a number");\
+> alert(age); // NaN, conversion failed
+
+### Boolean Conversion
+
+Empty values are false:
+- 0
+- null
+- undefined
+- NaN
+- ""
+
+Non-empty values are true:
+- 1
+- "Hello World"
+- "0"
+- "null"
+
+> alert( Boolean(1) ); // true\
+> alert( Boolean(0) ); // false
+
+> alert( Boolean("hello") ); // true\
+> alert( Boolean("") ); // false
