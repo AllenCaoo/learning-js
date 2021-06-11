@@ -110,3 +110,27 @@ Returns a **string** of the type of the operand/argument.
 > typeof Math // "object"; built in object for math operations\
 > typeof null // "object" \
 > typeof alert // "function"
+
+## INTERACTIONS
+
+### alert
+Shows a message and waits for the user to press “OK”.
+
+***Returns*** true if OK pressed, returns false if esc/cancel pressed.
+
+>  result = alert("Hello there!");
+
+### prompt
+
+It shows a modal window with a text message, an input field for the visitor, and the buttons OK/cancel.
+
+> result = prompt(title, [default]);
+
+**title** = The text to show the visitor.\
+**default** = An optional second parameter, the initial value for the input field.
+value: if press OK. 
+
+***Returns*** true if user pressed OK, then; if pressed cancel then return null.
+
+> let age = prompt('How old are you?', 18);\
+> alert(\`You are ${age} years old!`); // You are 18 years old!
