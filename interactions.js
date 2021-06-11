@@ -21,7 +21,10 @@ result = prompt("What is the 320th digit of pi");
 bruh = prompt("What is up", "not bad");
 
 /** confirm
- * 
+ *  Shows a modal window with a question and two buttons: OK and Cancel.
+ *  Returns true if OK is pressed and false otherwise.
  */
+let isAllenCanadian = confirm("Is Allen Cao a Canadian");
+alert(isAllenCanadian); // true if OK is pressed
 
  
