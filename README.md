@@ -291,7 +291,6 @@ Rarely and only carefully used
 > let a = (1 + 2, 3 + 4, 5 + 7);\
 > alert( a ); // 12 (the result of 3 + 4)
 
-Somewhat 
 
 
 
