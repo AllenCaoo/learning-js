@@ -286,10 +286,20 @@ Prefix form:
 
 The comma operator allows us to evaluate several expressions, dividing them with a comma ,. Each of them is evaluated but only the result of the last one is returned.
 
-Rarely and only carefully used
+Rarely and only carefully used.
 
 > let a = (1 + 2, 3 + 4, 5 + 7);\
 > alert( a ); // 12 (the result of 3 + 4)
+
+### Bitwise Operators
+List:
+- AND ( & )
+- OR ( | )
+- XOR ( ^ )
+- NOT ( ~ )
+- LEFT SHIFT ( << )
+- RIGHT SHIFT ( >> )
+- ZERO-FILL RIGHT SHIFT ( >>> )
 
 
 
