@@ -219,8 +219,8 @@ Non-empty values are true:
 If str1 is not a string and str2 is a string, then in str1 + str2, str1 will be converted to string (only if str1 is directly in front of or behind str2)
 
 > alert('1' + 2); // "12"\
-> alert(false + '1'); // false1
-> alert(2 + 2 + '1' ); // "41" and not "221"
+> alert(false + '1'); // false1\
+> alert(2 + 2 + '1' ); // "41" and not "221"\
 > alert('1' + 2 + 2); // "122" and not "14"
 
 NOTE: String concactenation doesn't work with - or /. So when these operators are involved, all strings will be converted to Numbers.
@@ -301,6 +301,8 @@ List:
 - RIGHT SHIFT ( >> )
 - ZERO-FILL RIGHT SHIFT ( >>> )
 
+
+## Comparisons
 
 
 
