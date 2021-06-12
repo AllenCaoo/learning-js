@@ -201,3 +201,97 @@ Non-empty values are true:
 
 > alert( Boolean("hello") ); // true\
 > alert( Boolean("") ); // false
+
+## Basic Operators and Math
+### Built-in math operators:
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (*not floor*) (/)
+- Remainder (%)
+- Exponentiation (**)
+
+### String Concatenation
+
+> let s = "my" + "string";\
+> alert(s); // mystring
+
+If str1 is not a string and str2 is a string, then in str1 + str2, str1 will be converted to string (only if str1 is directly in front of or behind str2)
+
+> alert('1' + 2); // "12"\
+> alert(false + '1'); // false1
+> alert(2 + 2 + '1' ); // "41" and not "221"
+> alert('1' + 2 + 2); // "122" and not "14"
+
+NOTE: String concactenation doesn't work with - or /. So when these operators are involved, all strings will be converted to Numbers.
+
+> alert( 6 - '2' ); // 4, converts '2' to a number\
+> alert( '6' / '2' ); // 3, converts both operands to numbers
+
+### Number Conversion Using +
+
+Adding **+** behind a variable (without adding or string concating anything) will make it become a number. Basically does the SAME THING as Number(...)
+
+i.e.: 
+> // No effect on numbers\
+> let x = 1;\
+> alert( +x ); // 1
+
+> let y = -2;\
+> alert( +y ); // -2
+
+> // Converts non-numbers\
+> alert( +true ); // 1\
+> alert( +"" );   // 0
+
+### Assignment Returns a Value
+
+Something to keep in mind: an assignment statement *ALWAYS RETURNS THE VALUE ON THE RIGHT HAND SIDE*:
+
+> let a = 1;\
+> let b = 2;\
+> let c = 3 - (a = b + 1); // a = b + 1 returns 3\
+> alert( a ); // 3\
+> alert( c ); // 0
+
+### Incrementing/Modifying-in-Place
+
+Same as any popular language.
+
+> let n = 2;\
+> n = n + 5;\
+> n = n * 2;
+
+Same as:
+
+> let n = 2;\
+> n += 5;\
+> n *= 2;
+
+Incrementing by 1 up or 1 down: can do it in **suffix** form or **prefix** form.
+
+The difference between suffix form and prefix form is that suffix form returns the value BEFORE it increments while suffix form returns the value AFTER it increments. The value that the variable increments to is still the same.
+
+Suffix form:
+> let n = 2;\
+> a = n++; // n = 3, a = 2 (prev value of n)\
+> b = n--; // n = 2, a = 3 (prev value of n)
+
+Prefix form:
+> let n = 2;\
+> a = ++n; // n = 3, a = 3 (incremented value of n)\
+> b = --n; (decremented value of n) // n = 2
+
+### Commas
+
+The comma operator allows us to evaluate several expressions, dividing them with a comma ,. Each of them is evaluated but only the result of the last one is returned.
+
+Rarely and only carefully used
+
+> let a = (1 + 2, 3 + 4, 5 + 7);\
+> alert( a ); // 12 (the result of 3 + 4)
+
+Somewhat 
+
+
+
