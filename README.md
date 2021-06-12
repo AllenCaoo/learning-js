@@ -304,5 +304,18 @@ List:
 
 ## Comparisons
 
+Like any other popular language. Results in a boolean.
 
+- Greater/less than: a > b, a < b.
+- Greater/less than or equals: a >= b, a <= b.
+- Equals: a == b.
+- Not equals: a != b
+
+### String Comparisons
+
+Like any other popular language. Compares in lexicographical order.
+
+> alert( 'Z' > 'A' ); // true\
+> alert( 'Glow' > 'Glee' ); // true\
+> alert( 'Bee' > 'Be' ); // true
 
