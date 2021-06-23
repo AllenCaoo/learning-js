@@ -319,3 +319,51 @@ Like any other popular language. Compares in lexicographical order.
 > alert( 'Glow' > 'Glee' ); // true\
 > alert( 'Bee' > 'Be' ); // true
 
+### Comparison of different types
+
+JS tries to convert everything to a number.
+
+When comparing a value val with a number, JavaScript converts val to number.
+
+> alert( '2' > 1 ); // true, string '2' becomes a number 2\
+> alert( '01' == 1 ); // true, string '01' becomes a number 1\
+> alert('s' == 1); // false, Number('s') == Nan != 1
+> alert('' == 0) // true, Number('') = 0
+
+When comparing a number with a boolean, JS converts the boolean to a number; **true** becomes **1** and **false** becomes **0**
+
+> alert( true == 1 ); // true\
+> alert( false == 0 ); // true
+
+### Strict Equality (**===**)
+
+A strict equality operator === checks the equality without type conversion.
+
+> alert( 0 === false ); // false, because the types are different
+
+### Comparison with null and undefined
+
+In strict equality, null is not equal to undefined
+becomes both are different types.
+> alert( null === undefined ); // false
+
+However in non-strict equality, they ONLY EQUAL EACH OTHER.
+
+> alert( null == undefined ); // true
+
+For other math comparisons (<, >, <=, =>):
+null/undefined are converted to numbers: null becomes 0, while undefined becomes NaN.
+
+### Strange result: null vs 0
+
+> alert( null > 0 );  // (1) false\
+> alert( null == 0 ); // (2) false\
+> alert( null >= 0 ); // (3) true
+
+### Never Compare Undefined
+
+Number(undefined) always results in NaN, which always returns false when compared to another value.
+
+> alert( undefined > 0 ); // false (1)\
+> alert( undefined < 0 ); // false (2)\
+> alert( undefined == 0 ); // false (3)
