@@ -91,7 +91,7 @@ Use backticks(`) to embed another string in another string. Put ${str} inside th
 ```js
 let str = "Hello";
 let str2 = 'Single quotes are ok too';
-let phrase = \`can embed another ${str}`;
+let phrase = `can embed another ${str}`;
 alert(phrase);  // "can embed another Hello"
 ```
 
@@ -352,7 +352,7 @@ b = n--; // n = 2, a = 3 (prev value of n)
 Prefix form:
 ```js
 let n = 2;
-a = ++n; // n = 3, a = 3 (incremented value of n)\
+a = ++n; // n = 3, a = 3 (incremented value of n)
 b = --n; (decremented value of n) // n = 2
 ```
 
@@ -446,8 +446,8 @@ null/undefined are converted to numbers: null becomes 0, while undefined becomes
 ### Strange result: null vs 0
 
 ```js
-alert( null > 0 );  // (1) false\
-alert( null == 0 ); // (2) false\
+alert( null > 0 );  // (1) false
+alert( null == 0 ); // (2) false
 alert( null >= 0 ); // (3) true
 ```
 
