@@ -1,5 +1,5 @@
 # learning-js
-Repository of notes and beginner files for learning JavaScript and Node.js 
+Repository of notes and beginner files for learning JavaScript and Node.js. Intended as an extremely quick guide for programmers who have had experience with any other popular language.
 
 ## INTRODUCTION
 
