@@ -321,9 +321,9 @@ alert( c ); // 0
 
 ### Logic Operators
 
-- Or = ```js || ```
-- And = ```js && ```
-- not = ```js ! ```
+- Or = ``` || ```
+- And = ``` && ```
+- not = ``` ! ```
 
 ### Incrementing/Modifying-in-Place
 
