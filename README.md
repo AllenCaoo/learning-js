@@ -319,6 +319,12 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
+### Logic Operators
+
+- Or = ```js || ```
+- And = ```js && ```
+- not = ```js ! ```
+
 ### Incrementing/Modifying-in-Place
 
 Same as any popular language.
@@ -459,4 +465,29 @@ Number(undefined) always results in NaN, which always returns false when compare
 alert( undefined > 0 ); // false (1)
 alert( undefined < 0 ); // false (2)
 alert( undefined == 0 ); // false (3)
+```
+
+## Conditional Branching
+
+### 'If' statement
+
+Executes block of code in bracket if the 'if' statement is truthy.
+
+```js
+if (1 > 0) {
+  alert('This will always alert');
+}
+```
+
+### Boolean Conversion
+
+Everything in the 'if' paranthesis will always be converted to boolean.
+
+```js
+if (0 || null) { // 0, null is falsy
+  ...
+}
+if (1 || 'Hello') { // 1 is truthy
+  ...
+}
 ```
