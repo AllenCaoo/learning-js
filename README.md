@@ -36,29 +36,57 @@ console.log(1
 
 ## 💻💻 Variables 💻💻
 
-Declaring a variable:
+
+### 'let' Keyword
+Let declares a local variable:
 
 ```js
-let var;
+let num;
 ```
 
-Initializing a variable:
+Initializing the variable:
 
 ```js
-var = 3;
+num = 3;
 ```
 
 Do both at the same time:
 
 ```js
-let var = 3;
+let num = 3;
 ```
 
-Erroring if you use "let" statement on an already declared variable
+Erroring if you use "let" statement on an already declared variable:
 
 ```js
-let var = 3;
-let var = 1; // error
+let num = 3;
+let num = 1; // error
+```
+
+### 'var' Variables
+You can also declare a global variable with no block scope using keyword 'var':
+
+```js
+if (true) {
+  var str = 'this can be called anywhere';
+}
+alert(str); // will alert str
+```
+
+Using 'var,' you can also redeclare a 'var' variable:
+
+```js
+var num = 3;
+var num = 10; // No error here
+```
+
+### Constant variables
+
+Constant variables use keyword 'const' to declare. It cannot be reassigned after being declared (same as final variables in Java).
+
+```js
+const COLOR_RED = "#F00";
+COLOR_RED = "red"; // Will error; cannot reassign variable
 ```
 
 ## 💻💻 DATA TYPES 💻💻
