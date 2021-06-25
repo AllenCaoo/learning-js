@@ -568,9 +568,63 @@ if (company == 'Netscape') {
 }
 ```
 
-### Logical Operators
+## 💻💻 Logical Operators 💻💻
 
 - Or = ``` || ```
 - And = ``` && ```
 - not = ``` ! ``` (NOTE: **!something** converts something to boolean then inverses it, so **!!something** simply converts something to boolean)  
 - Nullish Coalescing = ``` ?? ``` (will be discussed in next section)
+
+
+## 💻💻 Nullish coalescing operator '??' 💻💻
+
+The result of ```a ?? b``` is:
+- if a is defined (not null and not undefined), then a
+- if a isn’t defined (null or undefined), then b
+
+```result = a ?? b``` is the same as:
+
+```js
+result = (a !== null && a !== undefined) ? a : b;
+```
+
+For example:
+
+```js
+let user;
+
+alert(user ?? "Anonymous"); // Anonymous (user not defined)
+```
+```js
+let user = "John";
+
+alert(user ?? "Anonymous"); // John (user defined)
+```
+
+### '??' Precedence
+
+'??' is evaluated before '=' and '?,' BUT after mathematical operators.
+
+```js
+// without parentheses
+let area = height ?? 100 * width ?? 50;
+
+// ...is the same as this (probably not what we want):
+let area = height ?? (100 * width) ?? 50;
+```
+
+### Using '??' with '||' and '&&'
+
+JS FORBIDS '??' to be used with '||' and '&&' unless they are separated by parantheses.
+
+For example:
+
+```js
+let x = 1 && 2 ?? 3; // Syntax error
+```
+
+```js
+let x = (1 && 2) ?? 3; // Works
+
+alert(x); // 2
+```
