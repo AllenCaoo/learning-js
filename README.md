@@ -487,7 +487,82 @@ Everything in the 'if' paranthesis will always be converted to boolean.
 if (0 || null) { // 0, null is falsy
   ...
 }
-if (1 || 'Hello') { // 1 is truthy
+if (1 || 'Hello') { // 1, 'Hello' is truthy
   ...
+}
+```
+
+### Else If and Else
+
+Same as Java.
+
+```js
+if (condition1) {
+  alert('condition1 is true');
+} else if (condition2) {
+  alert('condition1 is false but condition2 is true');
+} else {
+  alert('condition1 and condition2 are both false');
+}
+```
+
+### Conditional Operator '?'
+
+In the following, given a condition on the left of '?,' is true, then return value1, else return value2:
+
+```js
+let result = condition ? value1 : value2;
+```
+This is the same as:
+```js
+let result;
+if (condition) {
+  result = true;
+} else {
+  result = false;
+}
+```
+
+For example:
+
+```js
+let canDrink = (age > 21) ? true : false;
+```
+
+### Multiple '?'
+
+If multiple '?' exist, then there are else if statements. The following is an example.\ 
+NOTE: multiple (condition ? value) are separated by ':'
+
+```js
+let message = (age < 3) ? 'Hi, baby!' :
+  (age < 18) ? 'Hello!' :
+  (age < 100) ? 'Greetings!' :
+  'What an unusual age!';
+```
+
+This is equivalent to:
+
+```js
+if (age < 3) {
+  message = 'Hi, baby!';
+} else if (age < 18) {
+  message = 'Hello!';
+} else if (age < 100) {
+  message = 'Greetings!';
+} else {
+  message = 'What an unusual age!';
+}
+```
+
+Another example:
+
+```js
+let company = prompt('Which company created JavaScript?', '');
+
+if (company == 'Netscape') {
+  alert('Right!');
+} else {
+  alert('Wrong.');
 }
 ```
