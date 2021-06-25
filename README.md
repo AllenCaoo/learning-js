@@ -1,7 +1,14 @@
+
+░░░░░██╗░██████╗
+░░░░░██║██╔════╝
+░░░░░██║╚█████╗░
+██╗░░██║░╚═══██╗
+╚█████╔╝██████╔╝
+░╚════╝░╚═════╝░
 # learning-js
 Repository of notes and beginner files for learning JavaScript and Node.js. Intended as an extremely quick guide for programmers who have had experience with any other popular language.
 
-## <span style="color:blue">*INTRODUCTION*</span>
+## 💻💻 INTRODUCTION 💻💻
 
 ### Some basics:
 ```js
@@ -27,7 +34,7 @@ console.log(1
 2)  // does not error
 ```
 
-## Variables
+## 💻💻 Variables 💻💻
 
 Declaring a variable:
 
@@ -54,7 +61,7 @@ let var = 3;
 let var = 1; // error
 ```
 
-## DATA TYPES
+## 💻💻 DATA TYPES 💻💻
 ### Numbers
 Integers and floats; overflows once too big in the positives or negatives.
 - 302
@@ -144,7 +151,7 @@ typeof null // "object"
 typeof alert // "function"
 ```
 
-## INTERACTIONS
+## 💻💻 INTERACTIONS 💻💻
 
 ### alert
 Shows a message and waits for the user to press “OK”.
@@ -184,7 +191,7 @@ let isAllenCanadian = confirm("Is Allen Cao a Canadian");
 alert(isAllenCanadian); // true if OK is pressed
 ```
 
-## TYPE CONVERSIONS
+## 💻💻 TYPE CONVERSIONS 💻💻
 Most of the time, operators and functions automatically convert the values given to them to the right type.
 
 For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers.
@@ -253,7 +260,7 @@ alert( Boolean(0) ); // false
 > alert( Boolean("") ); // false
 ```
 
-## Basic Operators and Math
+## 💻💻 Basic Operators and Math 💻💻
 ### Built-in math operators:
 - Addition (+)
 - Subtraction (-)
@@ -384,7 +391,7 @@ List:
 - ZERO-FILL RIGHT SHIFT ( >>> )
 
 
-## Comparisons
+## 💻💻 Comparisons 💻💻
 
 Like any other popular language. Results in a boolean.
 
@@ -467,7 +474,7 @@ alert( undefined < 0 ); // false (2)
 alert( undefined == 0 ); // false (3)
 ```
 
-## Conditional Branching
+## 💻💻 Conditional Branching 💻💻
 
 ### 'If' statement
 
