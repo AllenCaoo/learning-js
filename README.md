@@ -326,12 +326,6 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
-### Logic Operators
-
-- Or = ``` || ```
-- And = ``` && ```
-- not = ``` ! ```
-
 ### Incrementing/Modifying-in-Place
 
 Same as any popular language.
@@ -573,3 +567,10 @@ if (company == 'Netscape') {
   alert('Wrong.');
 }
 ```
+
+### Logical Operators
+
+- Or = ``` || ```
+- And = ``` && ```
+- not = ``` ! ``` (NOTE: **!something** converts something to boolean then inverses it, so **!!something** simply converts something to boolean)  
+- Nullish Coalescing = ``` ?? ``` (will be discussed in next section)
