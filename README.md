@@ -656,3 +656,94 @@ let x = (1 && 2) ?? 3; // Works
 
 alert(x); // 2
 ```
+
+## Loop: While and For 
+
+### "While" Loop
+ 
+```js
+while (condition) {
+  // code
+  // so-called "loop body"
+}
+```
+
+While loops with numbers: number are truthy when not equal to 0. For example:
+
+```
+let i = 3;
+while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
+  alert( i );
+  i--;
+}
+```
+
+is the same as:
+
+```js
+let i = 0;
+while (i < 3) { // shows 0, then 1, then 2
+  alert( i );
+  i++;
+}
+```
+
+Do-while loop: do the BODY FIRST and then check while loop condition.
+
+```js
+let i = 0;
+do {
+  alert( i );
+  i++;
+} while (i < 3);
+```
+
+### The "for" Loop
+
+For loop syntax are the same as Java and C++.
+
+```js
+for (begin; condition; step) {
+  // ... loop body ...
+}
+```
+
+For example:
+
+```js
+for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+  alert(i);
+}
+```
+
+### Breaking the Loop
+
+'break' keyword in a loop exits the loop.
+
+```js
+let sum = 0;
+while (true) {
+  let value = +prompt("Enter a number", '');
+  if (!value) { break }; // if !value is true, then exits the loop
+  sum += value;
+}
+alert( 'Sum: ' + sum );
+```
+
+### Continue Keyword
+
+'continue' keyword proceeds to the next iteration.
+```js
+for (let i = 0; i < 10; i++) {
+
+  // if true, skip the remaining part of the body
+  if (i % 2 == 0) continue;
+
+  alert(i); // 1, then 3, 5, 7, 9
+}
+```
+
+**NOTE: No break/continue to the right side of ‘?’**. Only can be used in loops.
+
+### Labels For Break/Continue
+
