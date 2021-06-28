@@ -657,7 +657,7 @@ let x = (1 && 2) ?? 3; // Works
 alert(x); // 2
 ```
 
-## Loop: While and For 
+## 💻💻 Loop: While and For 💻💻
 
 ### "While" Loop
  
@@ -746,4 +746,21 @@ for (let i = 0; i < 10; i++) {
 **NOTE: No break/continue to the right side of ‘?’**. Only can be used in loops.
 
 ### Labels For Break/Continue
+
+A label is a name for a loop. You can use a label, call "**break labelName**" or "**continue labelName**," and break/continue the loop with the label name.
+
+For example:
+
+```js
+outer: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    let input = prompt(`Value at coords (${i}, ${j})`, '');
+    (!input) { break outer };
+  }
+}
+alert('Done!');
+```
+Above, when **break outer** is called, it will break out of the outer loop, and proceed directly to **alert('Done!')**.
+
+
 
