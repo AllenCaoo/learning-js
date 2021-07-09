@@ -857,3 +857,88 @@ let sum = (a, b) => {  // the curly brace opens a multiline function
 alert( sum(1, 2) ); // 3
 ```
 
+## 💻💻 Objects 💻💻
+
+Same concept as any other OOP language.
+
+## Object Literals
+
+Gives properties as key-value pairs. Access using dot notiation. If property does not exist then it is **undefined**.
+
+```js
+let user = {     // an object
+  name: "John",  // by key "name" store value "John"
+  age: 30        // by key "age" store value 30
+};
+
+/* Accessing properties */
+alert(user.name); // John
+alert(user.age); // 30
+alert(user.job); // undefined
+```
+
+You can add a property to an object.
+
+```js
+user.job = "software engineer";
+alert(user.job); // software engineer
+```
+
+You can delete a property from an object using the **delete keyword**.
+
+```js
+delete(user.job);
+alert(user.job); // undefined
+```
+
+### Multiword property
+
+Property key with multiple words.
+```js
+let user = {
+  name: "John",
+  age: 30,
+  "Likes to sleep": true
+};
+
+/* Accessing multiword properties using ["property"] */
+alert(user["Likes to sleep"]) // true
+delete(user["Likes to sleep"]) // property is no more
+```
+
+### Computed properties
+
+A key of a property can be surrounded with square brackets, indicating that the inside is computed and the key variable name is the computed value.
+
+```js
+let fruit = prompt("Which fruit to buy?", "apple");
+
+let bag = {
+  [fruit]: 5, // the name of the property is taken from the variable fruit
+};
+
+alert( bag.apple ); // 5 if fruit="apple"
+```
+
+Same as:
+
+```js
+let fruit = prompt("Which fruit to buy?", "apple");
+let bag = {};
+
+// take property name from the fruit variable
+bag[fruit] = 5;
+```
+
+Even more complexity:
+
+```js
+let fruit = 'apple';
+let bag = {
+  [fruit + 'Computers']: 5 // bag.appleComputers = 5
+};
+```
+
+
+
+
