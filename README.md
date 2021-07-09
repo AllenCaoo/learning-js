@@ -763,4 +763,97 @@ alert('Done!');
 Above, when **break outer** is called, it will break out of the outer loop, and proceed directly to **alert('Done!')**.
 
 
+## 💻💻 Functions 💻💻
+
+### Function Declaration
+Same as any language.
+
+```js
+function name(parameters, delimited, by, comma) {
+  /* body code */
+}
+```
+
+### Function Expressions
+
+Make a function into a variable.
+```js
+let sayHi = function() {
+  alert( "Hello" );
+};
+
+alert(sayHi); // shows the code in the function sayHi
+alert(sayHi()) // alerts "Hello"
+```
+
+Difference between function expressions and declarations is that when a function is declared, it can be used before and after the declaration, while when a function is
+expressed, it can only be used after it is stored in a variable.
+
+### Callback functions (functions as arguments)
+
+Very similar to Python.
+
+```js
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "You agreed." );
+}
+
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
+```
+
+## Arrow Functions
+
+Looks like this:
+
+```js
+let func = (arg1, arg2, ..., argN) => expression;
+```
+
+which basically is a function expression that when called with args1, args2, ..., argsN will RETURN the **evaluated** expression on the right. It is the same as:
+
+```js
+let func = function(arg1, arg2, ..., argN) {
+  return expression;
+};
+```
+
+For example:
+
+```js
+let sum = (a, b) => a + b;
+
+/* This arrow function is a shorter form of:
+
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+
+alert( sum(1, 2) ); // 3
+```
+
+### Multiline Arrow Functions
+
+Remember: the right side of arrow is **EVALUATED**.
+
+For example:
+
+```js
+let sum = (a, b) => {  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+};
+
+alert( sum(1, 2) ); // 3
+```
 
